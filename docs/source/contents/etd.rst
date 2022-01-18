@@ -45,46 +45,103 @@ the metadata.xml file as a supplemental file.
 .. code-block:: xml
 
     <supplemental-files>
-    <file>
-    <archive-name>Supplemental_File_1.fasta</archive-name>
-    <upload-name>Supplemental_File_1.fasta</upload-name>
-    <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=0&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
-    <mime-type>text/plain</mime-type>
-    <description>JCVI-CMR Catalase Database (FASTA format)</description>
-    </file>
-    <file>
-    <archive-name>Supplemental_File_2.fasta</archive-name>
-    <upload-name>Supplemental_File_2.fasta</upload-name>
-    <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=1&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
-    <mime-type>text/plain</mime-type>
-    <description>JCVI-CMR rpsL Database (FASTA format)</description>
-    </file>
-    <file>
-    <archive-name>Supplemental_File_3.csv</archive-name>
-    <upload-name>Supplemental_File_3.csv</upload-name>
-    <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=2&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
-    <mime-type>application/vnd.ms-excel</mime-type>
-    <description>Taxonomy of GOS catalase/rpsL hits</description>
-    </file>
-    <file>
-    <archive-name>Supplemental_File_4.csv</archive-name>
-    <upload-name>Supplemental_File_4.csv</upload-name>
-    <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=3&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
-    <mime-type>text/plain</mime-type>
-    <description>GOS catalase hits with metadata (CSV format)</description>
-    </file>
-    <file>
-    <archive-name>Supplemental_File_5.csv</archive-name>
-    <upload-name>Supplemental_File_5.csv</upload-name>
-    <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=4&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
-    <mime-type>text/plain</mime-type>
-    <description>GOS rpsL hits with metadata (CSV format)</description>
-    </file>
+        <file>
+            <archive-name>Supplemental_File_1.fasta</archive-name>
+            <upload-name>Supplemental_File_1.fasta</upload-name>
+            <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=0&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
+            <mime-type>text/plain</mime-type>
+            <description>JCVI-CMR Catalase Database (FASTA format)</description>
+        </file>
+        <file>
+            <archive-name>Supplemental_File_2.fasta</archive-name>
+            <upload-name>Supplemental_File_2.fasta</upload-name>
+            <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=1&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
+            <mime-type>text/plain</mime-type>
+            <description>JCVI-CMR rpsL Database (FASTA format)</description>
+        </file>
+        <file>
+            <archive-name>Supplemental_File_3.csv</archive-name>
+            <upload-name>Supplemental_File_3.csv</upload-name>
+            <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=2&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
+            <mime-type>application/vnd.ms-excel</mime-type>
+            <description>Taxonomy of GOS catalase/rpsL hits</description>
+        </file>
+        <file>
+            <archive-name>Supplemental_File_4.csv</archive-name>
+            <upload-name>Supplemental_File_4.csv</upload-name>
+            <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=3&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
+            <mime-type>text/plain</mime-type>
+            <description>GOS catalase hits with metadata (CSV format)</description>
+        </file>
+        <file>
+            <archive-name>Supplemental_File_5.csv</archive-name>
+            <upload-name>Supplemental_File_5.csv</upload-name>
+            <url>https://trace.tennessee.edu/cgi/viewcontent.cgi?filename=4&amp;amp;article=2048&amp;amp;context=utk_graddiss&amp;amp;type=additional</url>
+            <mime-type>text/plain</mime-type>
+            <description>GOS rpsL hits with metadata (CSV format)</description>
+        </file>
     </supplemental-files>
 
 PCDM Model for Fedora
 ---------------------
 
+Samples are based on current mappings from the `Notch8 mapping doc <https://docs.google.com/spreadsheets/d/1HgVKm6263FBvqMEOoC7VwCeGDtW7u1LjavlmPnA0qiY/edit#gid=0>`_.
+
+An ETD with supplemental files should look like this in Fedora.
+
+==============
+The Whole Work
+==============
+
+The ETD object should looks something like this.
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample-etd> a pcdm:Work ;
+        <http://purl.org/dc/terms/title> "The ‘Helper’ Phenotype: A Symbiotic Interaction Between Prochlorococcus and Hydrogen Peroxide Scavenging Microorganisms" ;
+        pcdm:hasFile <http://localhost/original_pdf>, <>, <> .
+
+=========================
+The Original Uploaded ETD
+=========================
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample-etd> a pcdmuse:OriginalFile ;
+        rdfs:label "MorrisJames_May2011_dissertation.pdf" ;
+        pcdm:fileOf <> .
+
+================
+The Stamped File
+================
+
+Should we just remove the cover page and use this as :code:`pcdm:`
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample-etd> a pcdmuse:File ;
+        rdfs:label "MorrisJames_May2011_dissertation.pdf" ;
+        pcdm:fileOf <> .
+
+============
+Service File
+============
+
+==================
+Supplemental Files
+==================
 
 
 User Expectations
