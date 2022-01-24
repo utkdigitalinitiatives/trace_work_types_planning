@@ -229,8 +229,14 @@ Unrestricted files should be available beneathe the metadata.
 Google Scholar
 --------------
 
-SEO / Schema.org
-----------------
+In order to insure discoverability in Google Scholar, :code:`highwire press meta tags` should be used.
+
+.. code-block:: xml
+
+    <meta name="citation_title" content="The ‘Helper’ Phenotype: A Symbiotic Interaction Between Prochlorococcus and Hydrogen Peroxide Scavenging Microorganisms">
+    <meta name="citation_authors" content="Morris, James Jeffrey">
+    <meta name="citation_date" content="2011">
+
 
 Other Relevant Approaches in the Wild
 -------------------------------------
