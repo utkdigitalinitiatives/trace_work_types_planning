@@ -139,6 +139,8 @@ The initial cover page should not be kept, but the other pages that are not in t
 
 This file should be the one accessed by users in the GUI.
 
+**Note**: What should the label be?
+
 .. code-block:: turtle
 
     @prefix pcdm: <http://pcdm.org/models#> .
@@ -213,6 +215,16 @@ Some ETDS, like this, have supplemental files that we want to make available to 
 
 User Expectations
 -----------------
+
+The user should see a thumbnail, the title, and other pertinent metadata defined in our metadata mapping.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available beneathe the metadata.
+
+.. image:: ../images/ETD_view.png
+    :width: 600
+    :Alt: Wireframe of a Sample ETD
 
 Google Scholar
 --------------
