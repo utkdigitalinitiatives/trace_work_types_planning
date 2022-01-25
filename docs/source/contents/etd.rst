@@ -236,6 +236,7 @@ In order to insure discoverability in Google Scholar, :code:`highwire press meta
     <meta name="citation_title" content="The ‘Helper’ Phenotype: A Symbiotic Interaction Between Prochlorococcus and Hydrogen Peroxide Scavenging Microorganisms">
     <meta name="citation_authors" content="Morris, James Jeffrey">
     <meta name="citation_date" content="2011">
+    <meta name="citation_pdf_url" content="http://our-future-repository.utk.edu/downloads/etd_file_2">
 
 
 Other Relevant Approaches in the Wild
