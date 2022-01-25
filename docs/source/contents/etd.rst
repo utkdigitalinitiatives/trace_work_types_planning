@@ -108,7 +108,7 @@ This is the most simplest model where we only have files and no file sets.
 
     <http://localhost/sample-etd> a pcdmworks:Work ;
         <http://purl.org/dc/terms/title> "The ‘Helper’ Phenotype: A Symbiotic Interaction Between Prochlorococcus and Hydrogen Peroxide Scavenging Microorganisms" ;
-        pcdm:hasFile <http://localhost/original_pdf>, <>, <> .
+        pcdm:hasFile <http://localhost/etd_file_1>, <http://localhost/etd_file_2>, <http://localhost/etd_file_3>, <http://localhost/etd_file_suppl_1>, <http://localhost/etd_file_suppl_2>, <http://localhost/etd_file_suppl_3>, <http://localhost/etd_file_suppl_4>, <http://localhost/etd_file_suppl_5> .
 
 =========================
 The Original Uploaded ETD
