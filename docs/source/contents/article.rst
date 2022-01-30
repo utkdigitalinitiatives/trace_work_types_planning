@@ -117,6 +117,16 @@ Ideally, this would not be available to users (at least in the GUI).
 User Expectations
 -----------------
 
+The user should see a thumbnail, the title, and other pertinent metadata defined in our metadata mapping.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available beneathe the metadata.
+
+.. image:: ../images/Article_view.png
+    :width: 600
+    :Alt: Wireframe of a Sample Article
+
 Google Scholar
 --------------
 
