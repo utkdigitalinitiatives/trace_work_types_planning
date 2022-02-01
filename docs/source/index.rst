@@ -3,11 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-TRACE Work Types
-================
+TRACE Worktype and Workflow Planning
+====================================
 
-This document describes the work type expectations for objects in its institutional repository. Each page describes
-expectations for modelling in Fedora, expectations for user experience, and expectations for discovery in search engines.
+This document describes the work type expectations for objects in our institutional repository. Each page describes
+expectations for modelling in Fedora, expectations for user experience, and expectations for discovery in Google Scholar.
+
+Also included are definitions for our current workflows that we want to recreate in the new system.
+
+Work Types
+----------
 
 .. toctree::
    :maxdepth: 1
@@ -16,6 +21,14 @@ expectations for modelling in Fedora, expectations for user experience, and expe
    contents/*
 
 
+Workflows
+---------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   workflows/*
 
 Search
 ======
