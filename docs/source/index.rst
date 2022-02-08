@@ -30,6 +30,14 @@ Workflows
 
    workflows/*
 
+Google Scholar Inclusion
+------------------------
+.. toctree::
+   :maxdepth: 2
+   :glob:
+
+   google_scholar/*
+
 Search
 ======
 
