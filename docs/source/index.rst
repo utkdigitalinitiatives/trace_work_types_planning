@@ -32,11 +32,31 @@ Workflows
 
 Google Scholar Inclusion
 ------------------------
+
 .. toctree::
    :maxdepth: 2
    :glob:
 
    google_scholar/*
+
+User Stories
+------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   features/*
+
+Conceptualizing Browse
+----------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   browse/*
+
 
 Search
 ======
