@@ -221,6 +221,29 @@ Finally, the graduate school:
 1. Publishes the ETD with the frontmatter.
 2. Applies the 1, 3, or 6 year embargo if granted.
 
+-------------------
+Future ETD Workflow
+-------------------
+
+This describes the workflow we would like to see in our next system with status indicators.
+
+Submitted
+=========
+
+In Progress
+===========
+
+Approved and On Hold
+====================
+
+Approved and Ready to Publish
+=============================
+
+Published
+=========
+
+
+
 ---------------
 Other Data Kept
 ---------------
