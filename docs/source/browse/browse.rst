@@ -20,7 +20,9 @@ Initial View
 The initial view of Trace should offer users an opportunity to search, browse, and deposit while also displaying
 information about the service.
 
-.. image:: ../images/initial_view_future_trace.png
+.. figure:: ../images/initial_view_future_trace.png
+    :scale: 60%
+    :alt: Initial View in New TRACE
 
 -----------------
 Browsing Research
@@ -29,7 +31,9 @@ Browsing Research
 If a user clicks browse by "Faculty and Graduate Research", the results should be limited to just research and give the
 user additional opportunities for refine.
 
-.. image:: ../images/faculty_and_grad_new_trace.png
+.. figure:: ../images/faculty_and_grad_new_trace.png
+    :scale: 60%
+    :alt: Browsing Research in New TRACE
 
 --------------
 Newfound Press
@@ -37,4 +41,6 @@ Newfound Press
 
 Similarly, limiting to "Newfound Press" should only show those titles.
 
-.. image:: ../images/newfound_press_new_trace.png
+.. figure:: ../images/newfound_press_new_trace.png
+    :scale: 60%
+    :alt: Newfound Press in New TRACE
