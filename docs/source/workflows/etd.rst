@@ -244,21 +244,60 @@ During this stage, the student will:
 On submit, the work should get flagged with a status of :code:`Submitted` and an email should be sent by the student and
 the system to the graduate school indicating that it is ready for initial review.
 
-In Progress
-===========
+Needs Changes
+=============
 
-The :code:`In Progress` status indicates
+An ETD with the status of :code:`Needs Changes` indicates that the graduate school has reviewed and that there are
+formatting changes needed by the student.
+
+When a work enters this status, an email is sent to the student with the changes required / a message by the graduate
+school.
+
+Updated
+=======
+
+After a needs changes request, the :code:`Updated` status indicates that a student has made a change and indicated that
+the object is ready for re-review. When this happens, the system will notify the graduate school by email that the object
+is ready for another review.
+
+This status will be re-used after all subsequent :code:`Needs Changes` requests.
 
 Approved and On Hold
 ====================
 
-Approved and Ready to Publish
+When an ETD no longer has formatting issues and the graduate school approves in the system, it will receive an
+:code:`Approved and On Hold` status. The student will also be sent an email stating this.
+
+The ETD will stay in this state until it is :code:`Approved and Ready to Publish`.
+
+At this point, the graduate school can apply an embargo for the student if they receive proper paper work outside of the
+system from the student and their thesis advisor.
+
+Accepted and Ready to Publish
 =============================
+
+This can only be applied to an ETD with the status of :code:`Approved and On Hold`.
+
+When the graduate school receives all paperwork from a student for their ETD, it goes to this status but is not published.
+An email is sent to the student notifying them of this.
+
+This status is necessary because the defense and paper work can sometimes happen more than a semester in advance of the
+student completing their coursework or other degree requirements.
+
+At this point, the graduate school can apply an embargo for the student if they receive proper paper work outside of the
+system from the student and their thesis advisor.
 
 Published
 =========
 
+This can only be applied to an ETD with the status of :code:`Accepted and Ready to Publish`.
 
+When the graduate school confirms that a student has met the requirements for graduation, a work is published.  At this
+point, its metadata is discoverable in the system, and if the object is not embargoed, is accessible in the system and in
+Google Scholar.
+
+At this point, the graduate school can apply an embargo for the student if they receive proper paper work outside of the
+system from the student and their thesis advisor.
 
 ---------------
 Other Data Kept
