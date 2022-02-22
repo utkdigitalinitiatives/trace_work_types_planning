@@ -225,13 +225,29 @@ Finally, the graduate school:
 Future ETD Workflow
 -------------------
 
-This describes the workflow we would like to see in our next system with status indicators.
+Ideally, we would like this workflow to be better for our students and the graduate school.  We would like un-published
+works to have specific statuses indicating to the "submitter" and "approver" about what needs to happen before the work
+goes live.  Each of these statuses are described below and relate to the steps detailed above.
 
 Submitted
 =========
 
+This status is reserved for initial submissions by the student to a collection with this workflow.
+
+During this stage, the student will:
+
+1. Initiate a deposit.
+2. Agree to terms associated with deposit.
+3. Add initial descriptive metadata about the work.
+4. Add the PDF version of the object and any associated supplemental files.
+
+On submit, the work should get flagged with a status of :code:`Submitted` and an email should be sent by the student and
+the system to the graduate school indicating that it is ready for initial review.
+
 In Progress
 ===========
+
+The :code:`In Progress` status indicates
 
 Approved and On Hold
 ====================
