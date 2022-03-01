@@ -13,6 +13,9 @@ It attempts to implement Rachel's `Trace New Structure <../other_files/TRACE_New
 
 Note: This is a work in progress and subject to change.
 
+Also, `this document <https://docs.google.com/spreadsheets/d/1AqRHXe8NbcQaWzdtGvVetoX_8N_8VLGthp7D5vYH3sM/edit#gid=0>`_
+helps to translate the collections available from our S3 bucket to the Digital Commons frontend.
+
 ------------
 Initial View
 ------------
