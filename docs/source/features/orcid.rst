@@ -36,3 +36,8 @@ Advancing Hyku: Hyrax / ORCID Integration
 
 
 Describe how this works
+
+.. literalinclude:: ../literals/delete.json
+   :language: json
+   :lines: 187-196
+   :linenos:
