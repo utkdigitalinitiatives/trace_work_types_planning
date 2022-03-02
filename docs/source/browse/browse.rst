@@ -9,7 +9,10 @@ About
 This section attempts to make sure we are on the same page about how browse, discovery, and collection organization must
 work.
 
-It attempts to implement Rachel's `Trace New Structure <../other_files/TRACE_NewStructure_2022.docx>`_  document in Wireframes.
+It attempts to implement Rachel's `Trace New Structure <../_static/TRACE_NewStructure_2022.docx>`_ document in Wireframes.
+
+.. important:: View Rachel's `Trace New Structure <../_static/TRACE_NewStructure_2022.docx>`_ document
+
 
 Note: This is a work in progress and subject to change.
 
