@@ -1,5 +1,5 @@
-Article
-=======
+Article Work Type
+=================
 
 About
 -----
@@ -10,11 +10,32 @@ This work type represents PDF objects from our Digital Commons instance where th
 * Preprint
 * Postprint
 
-This work type should capture things that fall in the purview of
-`Google Scholar inclusion guidelines <https://scholar.google.com/intl/en/scholar/inclusion.html>`_ only.
+Content of this work type should meet the
+`Google Scholar inclusion guidelines <https://scholar.google.com/intl/en/scholar/inclusion.html>`_ and be discoverable
+in Google Scholar.
 
-How to Identify
+These objects should always have:
+
+1. The original object uploaded by the user.
+2. Descriptive metadata and metatags that match the first page of the document.
+3. Any attached supplemental files.
+
+Migration Scope
 ---------------
+
+Current items in Digital Commons with an xpath of :code:`fields/field[@name="peer_reviewed"]` will get this type.
+
+We will also select specific collections in series across the repository.
+
+Only objects whose primary file is :code:`PDF` should get this work type.
+
+Suggested Actions
+-----------------
+
+1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
+2. We do not need a cover page for these.  We assume descriptive metadata actions are followed.
+3. We will provide the vendor for migration pages with front matter but without the coverpage.
+4. We will keep all associated supplemental files.
 
 Example
 -------
