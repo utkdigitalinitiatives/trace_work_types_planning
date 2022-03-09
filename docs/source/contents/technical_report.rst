@@ -43,3 +43,89 @@ For this example, let's use the contents of :code:`https://trace.tennessee.edu/c
 
 This object includes a descriptive metadata file, the original file uploaded, and a copy of the file with
 a cover page.
+
+==============
+The Whole Work
+==============
+
+The object should be a :code:`pcdmworks:Work` and describe its relationship to its files along with its descriptive
+metadata elements.
+
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample-tecnical-report> a pcdmworks:Work ;
+        <http://purl.org/dc/terms/title> "Accelerated Innovation Development of Laser Metrology for Steel Bridge ..." ;
+        pcdm:hasFile <http://localhost/sample_report_file_1>, <http://localhost/sample_report_file_2>, <http://localhost/sample_report_file_3> .
+
+==========================
+The Original Uploaded File
+==========================
+
+The original uploaded file representing this work should be a :code:`pcdmuse:OriginalFile`.
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample_report_file_1> a pcdmuse:OriginalFile ;
+        rdfs:label "JonesWierschem_CEE_Report.pdf" ;
+        pcdm:fileOf <http://localhost/sample-technical-report> .
+
+This file does not need to be publicly accessible.
+
+====================
+File With Cover Page
+====================
+
+There should be a file with a cover page to aid in indexing with Google Scholar with appropriate metadata.
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample_report_file_2> a pcdmuse:PreservationFile, pcdmuse:IntermediateFile ;
+        rdfs:label "JonesWierschem_CEE_Report.pdf" ;
+        pcdm:fileOf <http://localhost/sample-technical_report> .
+
+======================
+Original Metadata File
+======================
+
+We want to keep the original metadata in case there are questions about the migration or something that originally existed
+but not appearing in the metadata here.
+
+Ideally, this would not be available to users (at least in the GUI).
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample_report_file_3> a pcdm:File ;
+        rdfs:label "metadata.xml" ;
+        pcdm:fileOf <http://localhost/sample-technical-report> .
+
+User Expectations
+-----------------
+
+The user should see the title, files, and other pertinent metadata defined in our metadata mapping. It should look similar
+to an :code:`Article` or other works.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available.
+
+.. image:: ../images/technical_report_view.png
+    :width: 600
+    :Alt: Wireframe of a Sample Technical Report
+
