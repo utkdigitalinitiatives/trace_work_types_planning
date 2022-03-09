@@ -129,3 +129,19 @@ Unrestricted files should be available.
     :width: 600
     :Alt: Wireframe of a Sample Technical Report
 
+Google Scholar Metatags
+-----------------------
+
+In order to insure discoverability in Google Scholar as a technical report, :code:`highwire press meta tags` should be
+used and a corresponding cover page should be generated.
+
+.. code-block:: xml
+
+    <meta name="citation_title" content="Accelerated Innovation Development of Laser Metrology for Steel Bridge Fabrication">
+    <meta name="citation_author" content="Jones, Timothy W.">
+    <meta name="citation_author" content="Wierscheim, Nicholas E.">
+    <meta name="citation_technical_report_institution" content="University of Tennessee">
+    <meta name="citation_abstract_html_url" content="###Link to the HTML Page the Work Appears On###">
+    <meta name="citation_publication_date" content="2019" />
+    <meta name="citation_language" content="en_US" />
+    <meta name="citation_pdf_url" content="###Link to the PDF###" />
