@@ -48,8 +48,28 @@ I'm not sure how this should work, but this is my best guess. Feedback is welcom
     @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
     @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
 
-    <http://localhost/sample-etd> a pcdmworks:Work ;
-        <http://purl.org/dc/terms/title> "Using Multiple-Mode Models for Fitting and Predicting the Rheological Properties of Polymeric Melts. Part II. Single and Double Step- Strain Flows" .
+    <http://localhost/sample-citation> a pcdmworks:Work ;
+        <http://purl.org/dc/terms/title> "Using Multiple-Mode Models for Fitting and Predicting the Rheological Properties of Polymeric Melts. Part II. Single and Double Step- Strain Flows" ;
+        pcdm:hasFile <http://localhost/sample_citation_file_1>.
+
+======================
+Original Metadata File
+======================
+
+We want to keep the original metadata in case there are questions about the migration or something that originally existed
+but not appearing in the metadata here.
+
+Ideally, this would not be available to users (at least in the GUI).
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample_citation_file_1> a pcdm:File ;
+        rdfs:label "metadata.xml" ;
+        pcdm:fileOf <http://localhost/sample-citation> .
 
 User Expectations
 -----------------
