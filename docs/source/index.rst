@@ -57,6 +57,14 @@ Conceptualizing Browse
 
    browse/*
 
+Migration Decisions
+--------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   migration/*
 
 Search
 ======
