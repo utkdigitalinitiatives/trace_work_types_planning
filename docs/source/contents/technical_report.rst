@@ -36,6 +36,7 @@ Example
 For this example, let's use the contents of :code:`https://trace.tennessee.edu/ce_reports/2`:
 
 .. code-block:: text
+
     0-JonesWierschem_CEE_Report.pdf
     JonesWierschem_CEE_Report.pdf
     metadata.xml
