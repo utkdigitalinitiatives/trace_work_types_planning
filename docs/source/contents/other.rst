@@ -11,7 +11,7 @@ These objects can have :code:`1-n` files and the primary file can be any extensi
 Migration Scope
 ---------------
 
-Items that are deemed out of scope of Digital Commons will get this worktype.
+Items that are deemed out of scope of Google Scholar will get this worktype.
 
 Suggested Actions
 -----------------
