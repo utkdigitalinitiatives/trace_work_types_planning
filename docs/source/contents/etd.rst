@@ -23,11 +23,10 @@ All objects from these two collections should get this work type.
 Suggested Actions
 -----------------
 
-1. If an object originated as a .doc or .docx, we keep it in that format as the preservation file.
-2. We do not keep the auto-generated PDF without front matter.
-3. We will provide the vendor for migration pages with front matter but without the coverpage.
-4. The vendor will build a feature to add the appropriate cover page.
-5. The vendor will build a feature for front matter going forward.
+1. If an object originated as a .doc or .docx, we need the pdf instead for cover page generation.
+2. We will provide the vendor for migration pages with front matter but without the coverpage.
+3. The vendor will build a feature to add the appropriate cover page.
+4. The vendor will build a feature for front matter going forward.
 
 
 Example Current ETD
