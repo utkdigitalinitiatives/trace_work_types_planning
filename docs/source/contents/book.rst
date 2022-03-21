@@ -520,3 +520,38 @@ Suggested Actions
 1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
 2. We may need a cover page for these.
 3. We will keep all associated supplemental files.
+
+Example
+-------
+
+User Expectations
+-----------------
+
+The user should see the title, files, and other pertinent metadata defined in our metadata mapping.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available.
+
+.. image:: ../images/book_work_type.png
+    :width: 600
+    :Alt: Wireframe of a Sample Technical Report
+
+
+Google Scholar Metatags
+-----------------------
+
+In order to insure discoverability in Google Scholar as a book, :code:`highwire press meta tags` should be
+used and a corresponding cover page should be generated.
+
+.. code-block:: xml
+
+    <meta name="citation_title" content="Correspondence of James K. Polk: Volume X, July-December 1845">
+    <meta name="citation_author" content="Cutler, Wayne">
+    <meta name="citation_isbn" content="1-57233-304-9">
+    <meta name="citation_publisher" content="Newfound Press">
+    <meta name="citation_abstract_html_url" content="###Link to the HTML Page the Work Appears On###">
+    <meta name="citation_publication_date" content="2004" />
+    <meta name="citation_date" content="2004" />
+    <meta name="citation_language" content="en_US" />
+    <meta name="citation_pdf_url" content="###Link to the PDF###" />
