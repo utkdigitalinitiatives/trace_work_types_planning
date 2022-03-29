@@ -257,6 +257,11 @@ Our metadata mapping will include this conversion for this worktype.
     <meta name="citation_pdf_url" content="http://our-future-repository.utk.edu/downloads/etd_file_2">
 
 
+Descriptive Metadata Mapping
+============================
+
+Descriptive metadata for ETDs is described `here <https://jirautk.atlassian.net/wiki/spaces/DLP/pages/2295005187/ETD+Profile>`_.
+
 Other Relevant Approaches in the Wild
 -------------------------------------
 
