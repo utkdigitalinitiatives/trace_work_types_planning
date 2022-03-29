@@ -197,32 +197,33 @@ Some ETDS, like this, have supplemental files that we want to make available to 
     @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
     @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
     @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix fabio: <http://purl.org/spar/fabio/> .
 
-    <http://localhost/etd_file_suppl_1> a pcdmuse:PreservationFile ;
+    <http://localhost/etd_file_suppl_1> a pcdmuse:OriginalFile, fabio:SupplementaryInformation  ;
         rdfs:label "Supplemental_File_1.fasta" ;
         dcterms:description "JCVI-CMR Catalase Database (FASTA format)" ;
         dcterms:format "text/plain" ;
         pcdm:fileOf <http://localhost/sample-etd> .
 
-    <http://localhost/etd_file_suppl_2> a pcdmuse:PreservationFile ;
+    <http://localhost/etd_file_suppl_2> a pcdmuse:OriginalFile, fabio:SupplementaryInformation ;
         rdfs:label "Supplemental_File_2.fasta" ;
         dcterms:description "JCVI-CMR rpsL Database (FASTA format)" ;
         dcterms:format "text/plain" ;
         pcdm:fileOf <http://localhost/sample-etd> .
 
-    <http://localhost/etd_file_suppl_3> a pcdmuse:PreservationFile ;
+    <http://localhost/etd_file_suppl_3> a pcdmuse:OriginalFile, fabio:SupplementaryInformation ;
         rdfs:label "Supplemental_File_3.csv" ;
         dcterms:description "Taxonomy of GOS catalase/rpsL hits" ;
         dcterms:format "application/vnd.ms-excel" ;
         pcdm:fileOf <http://localhost/sample-etd> .
 
-    <http://localhost/etd_file_suppl_4> a pcdmuse:PreservationFile ;
+    <http://localhost/etd_file_suppl_4> a pcdmuse:OriginalFile, fabio:SupplementaryInformation ;
         rdfs:label "Supplemental_File_4.csv" ;
         dcterms:description "GOS catalase hits with metadata (CSV format)" ;
         dcterms:format "text/plain" ;
         pcdm:fileOf <http://localhost/sample-etd> .
 
-    <http://localhost/etd_file_suppl_5> a pcdmuse:PreservationFile ;
+    <http://localhost/etd_file_suppl_5> a pcdmuse:OriginalFile, fabio:SupplementaryInformation ;
         rdfs:label "Supplemental_File_5.csv" ;
         dcterms:description "GOS rpsL hits with metadata (CSV format)" ;
         dcterms:format "text/plain" ;

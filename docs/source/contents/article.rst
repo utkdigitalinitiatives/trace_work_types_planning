@@ -135,6 +135,29 @@ Ideally, this would not be available to users (at least in the GUI).
         rdfs:label "metadata.xml" ;
         pcdm:fileOf <http://localhost/sample-scholarly-work> .
 
+==================
+Supplemental Files
+==================
+
+Articles can have supplemental files that we want to make available to users.
+
+While this object does not have one, we would model it like this if it did:
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix fabio: <http://purl.org/spar/fabio/> .
+
+    <http://localhost/sample_article_file_4> a pcdmuse:OriginalFile, fabio:SupplementaryInformation  ;
+        rdfs:label "Supplemental_File_1.fasta" ;
+        dcterms:description "JCVI-CMR Catalase Database (FASTA format)" ;
+        dcterms:format "text/plain" ;
+        pcdm:fileOf <http://localhost/sample-scholarly-work> .
+
+
 User Expectations
 -----------------
 
