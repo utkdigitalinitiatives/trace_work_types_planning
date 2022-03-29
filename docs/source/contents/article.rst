@@ -196,7 +196,7 @@ cover page should be generated.
     <meta name="citation_journal_title" content="npj Quantum Materials"/>
 
 Descriptive Metadata Mapping
-============================
+----------------------------
 
 Descriptive metadata for articles is described `here <https://jirautk.atlassian.net/wiki/spaces/DLP/pages/2296512513/Article+Profile>`_.
 

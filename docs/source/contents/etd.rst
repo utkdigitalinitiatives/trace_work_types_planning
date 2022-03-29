@@ -258,7 +258,7 @@ Our metadata mapping will include this conversion for this worktype.
 
 
 Descriptive Metadata Mapping
-============================
+----------------------------
 
 Descriptive metadata for ETDs is described `here <https://jirautk.atlassian.net/wiki/spaces/DLP/pages/2295005187/ETD+Profile>`_.
 
