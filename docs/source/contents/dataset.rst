@@ -44,3 +44,34 @@ Currently, these are our list of datasets:
     utk_datasets/30/metadata.xml
     utk_geogpubs/30/metadata.xml
 
+Suggested Actions
+-----------------
+
+1. If an object in Digital Commons refers to a object on trace.utk.edu that is not an ETD, we will migrate the object into the new repository as a dataset. It cannot stay at trace.utk.edu for security reasons.
+2. If an object is in Trace Deposit and not an ETD, we will migrate it to the new system as a dataset.
+2. We will provide the vendor for migration pages with front matter but without the coverpage.
+3. The vendor will build a feature to add the appropriate cover page.
+4. The vendor will build a feature for front matter going forward.
+
+Example Dataset
+---------------
+
+For this example, let's use :code:`https://trace.tennessee.edu/utk_datasets/1`.
+
+In Digital Commons, no files are currently managed, but in Trace Deposit there are several files and an original metadata.
+Datasets in Trace Deposit are compound objects with the metadata record attached to the compound object and 1 to many binary
+objects that belong the the compound object. In this instance:
+
+* Compound object: https://trace.utk.edu/islandora/object/utk.ir.fg%3A18
+* Binary object: https://trace.utk.edu/islandora/object/utk.ir.fg%3A15
+* Binary object: https://trace.utk.edu/islandora/object/utk.ir.fg%3A16
+* Binary object: https://trace.utk.edu/islandora/object/utk.ir.fg%3A17
+
+For migration, we want to move the metadata from the compound object and each binary object.
+
+Suggested PCDM Model for Fedora
+-------------------------------
+
+
+
+
