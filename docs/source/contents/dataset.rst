@@ -72,6 +72,12 @@ For migration, we want to move the metadata from the compound object and each bi
 Suggested PCDM Model for Fedora
 -------------------------------
 
+Google Dataset Inclusion
+------------------------
 
+Datasets should not go to Google Scholar, but should go to Google Dataset Search.
 
+Unlike Google Scholar, Google Dataset Search relies on a structured body via a Schema.org mapping in a :code:`script`
+tag in the :code:`head` of the document.
 
+Our metadata mapping will include this conversion for this worktype.
