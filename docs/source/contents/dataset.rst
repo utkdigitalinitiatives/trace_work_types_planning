@@ -115,9 +115,9 @@ Suggested Actions
 
 1. If an object in Digital Commons refers to a object on trace.utk.edu that is not an ETD, we will migrate the object into the new repository as a dataset. It cannot stay at trace.utk.edu for security reasons.
 2. If an object is in Trace Deposit and not an ETD, we will migrate it to the new system as a dataset.
-2. We will provide the vendor for migration pages with front matter but without the coverpage.
-3. The vendor will build a feature to add the appropriate cover page.
-4. The vendor will build a feature for front matter going forward.
+3. We will provide the vendor for migration pages with front matter but without the coverpage.
+4. The vendor will build a feature to add the appropriate cover page.
+5. The vendor will build a feature for front matter going forward.
 
 Example Dataset
 ---------------

@@ -109,8 +109,8 @@ The Whole Work
 The ETD object should be a :code:`pcdmworks:Work` and describe its relationship to its files along with its descriptive
 metadata elements.
 
-In order to get this right, we have to decide whether the original file and stamped pdf is a :code:`pcdmworks:FileSet`
-and thus a :code:`pcdm:Object` or simply unrelated :code:`pcdm:File`s.
+In order to get this right, we have to decide whether the original file and stamped pdf is a
+:code:`pcdmworks:FileSet` and thus a :code:`pcdm:Object` or simply unrelated :code:`pcdm:File`s.
 
 This is the simplest model where we only have files and no file sets. We have no preference in regards to filesets and
 will defer to the vendor for this.
