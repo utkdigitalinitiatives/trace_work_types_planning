@@ -71,44 +71,156 @@ Using a bit of sparql, we can determine what our list of datasets in Digital Com
 
 That returns these results:
 
-.. code-block:: text
+.. code-block:: json
 
-    info:fedora/utk.ir.fg:7
-    info:fedora/utk.ir.fg:14
-    info:fedora/utk.ir.fg:18
-    info:fedora/utk.ir.fg:27
-    info:fedora/utk.ir.fg:29
-    info:fedora/utk.ir.fg:101
-    info:fedora/utk.ir.fg:2090
-    info:fedora/utk.ir.fg:2099
-    info:fedora/utk.ir.fg:2110
-    info:fedora/utk.ir.fg:2112
-    info:fedora/utk.ir.fg:2129
-    info:fedora/utk.ir.fg:2132
-    info:fedora/utk.ir.fg:2162
-    info:fedora/utk.ir.fg:2176
-    info:fedora/utk.ir.fg:2179
-    info:fedora/utk.ir.fg:2188
-    info:fedora/utk.ir.fg:2193
-    info:fedora/utk.ir.fg:2198
-    info:fedora/utk.ir.fg:2215
-    info:fedora/utk.ir.fg:2239
-    info:fedora/utk.ir.fg:2245
-    info:fedora/utk.ir.fg:2248
-    info:fedora/utk.ir.fg:2263
-    info:fedora/utk.ir.fg:2268
-    info:fedora/utk.ir.fg:2273
-    info:fedora/utk.ir.fg:2287
-    info:fedora/utk.ir.fg:2290
-    info:fedora/utk.ir.fg:2303
-    info:fedora/utk.ir.fg:2307
-    info:fedora/utk.ir.fg:2311
-    info:fedora/utk.ir.fg:2341
-    info:fedora/utk.ir.fg:2355
-    info:fedora/utk.ir.fg:2360
-    info:fedora/utk.ir.fg:2381
-    info:fedora/utk.ir.fg:2384
-    info:fedora/utk.ir.fg:2385
+    {
+      "results": [
+        {
+          "pid": "info:fedora/utk.ir.fg:7",
+          "label": "Data from Tasmanian Eucalyptus Plant Functional Trait and Herbivory Data"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:14",
+          "label": "Data from The State of Social Media Policies in Higher Education"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:18",
+          "label": "Data from Public Progress, Data Management and the Land Grant Mission"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:27",
+          "label": "Data Used in Carter et al., Exotic Plants and Thermal Regimes, Functional Ecology"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:29",
+          "label": "Data from NSF Award #1155339: Governance of International Labor Migration: Scalar Politics and Network Relations"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:101",
+          "label": "Data from Interpretations of NASA’s MSL Dynamic Albedo of Neutrons Passive Mode Data"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2090",
+          "label": "Voices of Diversity"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2099",
+          "label": "Data from New Age Estimates and Microscopic Charcoal Data for the 1976-B Core from Anderson Pond, Tennessee, USA"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2110",
+          "label": "Data for Investigating the effect of metal powder recycling in Electron beam Powder Bed Fusion using process log data"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2112",
+          "label": "Data for Investigating the effect of metal powder recycling in Electron beam Powder Bed Fusion using process log data"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2129",
+          "label": "Data from Near-field infrared spectroscopy of monolayer MnPS3 (OBJ file)"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2132",
+          "label": "Spectroscopic studies of size-dependent optical properties of oxide nanomaterials, molecule-based materials in extreme condition"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2162",
+          "label": "Data from Host density and habitat structure influence host contact rates and Batrachochytrium salamandrivorans transmission"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2176",
+          "label": "Data from Mental Health, Weather Extremes, and Race study"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2179",
+          "label": "Data from American Astronomical Society Survey"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2188",
+          "label": "Data from The National Electronic Library - User questionnaire for universities 2007 (Finland)"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2193",
+          "label": "Data for Database Use Patterns in Academic and Public Libraries"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2198",
+          "label": "Data from Database Marketplace Survey 2000"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2215",
+          "label": "Data Fitness for Use - INTERVIEWS"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2239",
+          "label": "Data for Soil nematode functional diversity, successional patterns, and indicator taxa associated with vertebrate decomposition"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2245",
+          "label": "Data from Business Journals Data Sharing"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2248",
+          "label": "Job analyses of earth science data librarians and data managers"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2263",
+          "label": "Data from \"Traditional rural values and posttraumatic stress among rural and urban undergraduates\""
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2268",
+          "label": "Experimental methodologies can affect pathogenicity of Batrachochytrium salamandrivorans infections."
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2273",
+          "label": "Data Management Plan Compliance and Evaluation"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2287",
+          "label": "Data Fitness for Use - SURVEYS"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2290",
+          "label": "Data Services Librarians"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2303",
+          "label": "GSSE Water Quality 2020"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2307",
+          "label": "Influence of Flocculant on Flow Behavior and Undrained Shear Strength of Fine Coal Refuse"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2311",
+          "label": "Winter is Coming – Temperature Affects Immune Defenses and Susceptibility to Batrachochytrium salamandrivorans"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2341",
+          "label": "Frequency-dependent transmission of Batrachochytrium salamandrivorans in eastern newts"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2355",
+          "label": "Nitrogen-cycle genes and transcripts abundances under agricultural management practices in a long-term continuous cotton field"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2360",
+          "label": "Data for Broad host susceptibility of North American amphibian species to Batrachochytrium salamandrivorans"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2381",
+          "label": "Survey Validation of Job Analyses for Science Data Managers"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2384",
+          "label": "Alabama Taxation and Changing Discourse from Reconstruction to Redemption"
+        },
+        {
+          "pid": "info:fedora/utk.ir.fg:2385",
+          "label": "Alabama Taxation and Changing Discourse from Reconstruction to Redemption"
+        }
+      ]
+    }
 
 Suggested Actions
 -----------------
