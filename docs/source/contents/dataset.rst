@@ -158,7 +158,7 @@ name
 
 A descriptive name of the dataset. For example, "Snow depth in the Northern Hemisphere".
 
-The name property is modeled as `Schema.org Text <https://schema.org/Text>`_.
+The name property is modeled as `Text <https://schema.org/Text>`_.
 
 -----------
 description
@@ -169,11 +169,15 @@ A short summary describing the dataset.
 The summary must be between 50 and 5000 characters long and may include Markdown syntax. Embedded images need to use
 absolute path URLs.
 
-The description property is modeled as `Schema.org Text <https://schema.org/Text>`_.
+The description property is modeled as `Text <https://schema.org/Text>`_.
 
 -----------------------
 distribution.contentUrl
 -----------------------
+
+The link for the download.
+
+The distribution.contentUrl is modeled as a `URL <https://schema.org/URL>`_.
 
 ======================
 Recommended Properties
@@ -183,14 +187,18 @@ Recommended Properties
 alternateName
 -------------
 
+Alternative names that have been used to refer to this dataset, such as aliases or abbreviations.
+
+The property is modeled as `Text <https://schema.org/Text>`_.
+
 -------
 creator
 -------
 
 The creator or author of this dataset.
 
-If the creator is a person, it should be modelled as a `Schema.org Person <https://schema.org/Person>`_. If it is an
-organization, it should be modelled as a `Schema.org Organization <https://schema.org/Organization>`_.
+If the creator is a person, it should be modelled as a `Person <https://schema.org/Person>`_. If it is an
+organization, it should be modelled as a `Organization <https://schema.org/Organization>`_.
 
 To uniquely identify individuals, use ORCID ID as the value of the sameAs property of the Person type.
 
@@ -200,67 +208,184 @@ To uniquely identify institutions and organizations, use ROR ID (`UT Example <ht
 citation
 --------
 
+Identifies academic articles that are recommended by the data provider be cited in addition to the dataset itself.
+
+Provide the citation for the dataset itself with other properties, such as name, identifier, creator, and publisher
+properties. For example, this property can uniquely identify a related academic publication such as a data descriptor,
+data paper, or an article for which this dataset is supplementary material for.
+
+Don't use this property to provide citation information for the dataset itself. It is intended to identify related
+academic articles, not the dataset itself. To provide information necessary to cite the dataset itself use name,
+identifier, creator, and publisher properties instead.
+
+The property is modeled as `Text <https://schema.org/Text>`_ or `CreativeWork <https://schema.org/CreativeWork>`_.
+
 ------------
 distribution
 ------------
+
+The description of the location for download of the dataset and the file format for download.
+
+The property is modelled as `DataDownload <https://schema.org/DataDownload>`_.
 
 ---------------------------
 distribution.encodingFormat
 ---------------------------
 
+The file format of the distribution.
+
+The property is modeled as `Text <https://schema.org/Text>`_ or `URL <https://schema.org/URL>`_.
+
 ------
 funder
 ------
+
+A person or organization that provided financial support for this dataset.
+
+To uniquely identify individuals, use ORCID ID as the value of the sameAs property of the Person type.
+
+To uniquely identify institutions and organizations, use ROR ID.
+
+If the funder is a person, it should be modelled as a `Person <https://schema.org/Person>`_. If it is an
+organization, it should be modelled as a `Organization <https://schema.org/Organization>`_.
 
 -------------------
 hasPart or isPartOf
 -------------------
 
+If the dataset is a collection of smaller datasets, use the hasPart property to denote such relationship.
+
+Conversly, if the dataset is part of a larger dataset, use isPartOf. Both properties can take the form of a URL or a
+Dataset instance. In case Dataset is used as a value it has to include all of the properties required for a standalone
+Dataset.
+
+The property is modeled as `URL <https://schema.org/URL>`_ or `Dataset <https://schema.org/Dataset>`_.
+
 ----------
 identifier
 ----------
+
+An identifier, such as a DOI or a Compact Identifier. When JSON-LD, this is represented using JSON list syntax.
+
+The property is modeled as `URL <https://schema.org/URL>`_, `Text <https://schema.org/Text>`_, or
+`PropertyValue <https://schema.org/PropertyValue>`_.
 
 ---------------------
 includedInDataCatalog
 ---------------------
 
+The catalog to which the dataset belongs.
+
+The full definition of DataCatalog is available at schema.org/DataCatalog.
+
+Datasets are often published in repositories that contain many other datasets. The same dataset can be included in more than one such repository. You can refer to a data catalog that this dataset belongs to by referencing it directly.
+
+The property is modelled as `DataCatalog <https://schema.org/DataCatalog>`_.
+
 -------------------
 isAccessibleForFree
 -------------------
+
+Is the dataset is accessible without payment.
+
+The property is modeled as `Boolean <https://schema.org/Boolean>`_.
 
 --------
 keywords
 --------
 
+Keywords summarizing the dataset.
+
+The property is modelled as `Text <https://schema.org/Text>`_.
+
 -------
 license
 -------
+
+A license under which the dataset is distributed.
+
+The property can be modelled as `Text <https://schema.org/Text>`_ or `Creative Work <https://schema.org/CreativeWork>`_.
 
 --------------------
 measurementTechnique
 --------------------
 
+**Note**:  This property is pending standardization.
+
+The technique, technology, or methodology used in a dataset, which can correspond to the variable(s) described in
+:code:`variableMeasured`.
+
+The property can be modelled as `Text <https://schema.org/Text>`_ or `URL <https://schema.org/URL>`_.
+
 ------
 sameAs
 ------
+
+The URL of a reference web page that unambiguously indicates the dataset's identity.
+
+The property is modelled as `URL <https://schema.org/URL>`_.
 
 ---------------
 spatialCoverage
 ---------------
 
+A single point that describes the spatial aspect of the dataset. Only include this property if the dataset has a spatial
+dimension. For example, a single point where all the measurements were collected, or the coordinates of a bounding box
+for an area.
+
+This property is modelled as `Text <https://schema.org/Text>`_  or `Place <https://schema.org/Place>`_.
+
 ----------------
 temporalCoverage
 ----------------
+
+If the data in the dataset covers a specific time interval, it can be modelled here.
+
+Only include this property if the dataset has a temporal dimension. Use ISO 8601 standard to describe time intervals
+and time points. You can describe dates differently depending upon the dataset interval. Indicate open-ended intervals
+with two decimal points (..).
+
+The property is modelled as `Text <https://schema.org/Text>`_.
+
+Examples:
+
+.. code-block:: text
+    :caption: Single Date
+
+    "temporalCoverage" : "2008"
+
+.. code-block:: text
+    :caption: Time Period
+
+    "temporalCoverage" : "1950-01-01/2013-12-18"
+
+.. code-block:: text
+    :caption: Open-ended Time Period
+
+    "temporalCoverage" : "2013-12-19/.."
 
 ----------------
 variableMeasured
 ----------------
 
+**Note**:  This property is pending standardization.
+
+The variable that this dataset measures. For example, temperature or pressure.
+
+The property can be modelled as `Text <https://schema.org/Text>`_ or `PropertyValue <https://schema.org/PropertyValue>`_.
+
 -------
 version
 -------
+
+The version number for the dataset.
+
+The property can be modelled as `Text <https://schema.org/Text>`_ or `Number <https://schema.org/Number>`_.
 
 ---
 url
 ---
 
+Location of a page describing the dataset.
+
+The property can be modelled as `URL <https://schema.org/URL>`_.
