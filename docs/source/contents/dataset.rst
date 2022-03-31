@@ -187,6 +187,15 @@ alternateName
 creator
 -------
 
+The creator or author of this dataset.
+
+If the creator is a person, it should be modelled as a `Schema.org Person <https://schema.org/Person>`_. If it is an
+organization, it should be modelled as a `Schema.org Organization <https://schema.org/Organization>`_.
+
+To uniquely identify individuals, use ORCID ID as the value of the sameAs property of the Person type.
+
+To uniquely identify institutions and organizations, use ROR ID (`UT Example <https://ror.org/020f3ap87>`_).
+
 --------
 citation
 --------
