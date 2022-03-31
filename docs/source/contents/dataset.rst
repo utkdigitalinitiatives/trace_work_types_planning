@@ -10,6 +10,21 @@ be open or restricted from public access.
 Datasets are different from other works and deserve there own worktype in order to be included in
 `Google's Dataset Search <https://datasetsearch.research.google.com/>`_.
 
+Should datasets be in there own tenant?
+---------------------------------------
+
+Arguably, yes.  The primary purpose of treating datasets as its own worktype is to enable dataset sharing in Google
+Dataset Search.  Google Dataset Search has a different inclusion methodolgy than Google Scholar that more resembles standard
+indexing practices. In addition to requirements for :code:`JSON-LD` or :code:`rdfa`, this requires a sitemap with proper
+canonical tagging, and the sitemap should describe only the datasets. Therefore, having a separate tenant makes things easier.
+
+That being said, it is important to remember that we have very few datasets, and we don't have clear direction or policies
+for our approach to taking datasets in the future.
+
+A potential workaround for including datasets in our planned tenant then is to simply create a small feature that queries
+our instance for dataset works and generate a separate sitemap around those. The works described in the sitemap should
+all have proper :code:`JSON-LD` or :code:`rdfa`.
+
 Migration Scope
 ---------------
 
@@ -43,6 +58,57 @@ Currently, these are our list of datasets:
     utk_datasets/29/metadata.xml
     utk_datasets/30/metadata.xml
     utk_geogpubs/30/metadata.xml
+
+Using a bit of sparql, we can determine what our list of datasets in Digital Commons should be:
+
+.. code-block:: sparql
+
+    PREFIX rels-ext: <info:fedora/fedora-system:def/relations-external#>
+    PREFIX model: <info:fedora/fedora-system:def/model#>
+    SELECT $pid FROM <#ri> WHERE {{
+    ?pid rels-ext:isMemberOfCollection <info:fedora/utk.ir:fg>;
+    model:hasModel <info:fedora/islandora:compoundCModel> . }}
+
+That returns these results:
+
+.. code-block:: text
+
+    info:fedora/utk.ir.fg:7
+    info:fedora/utk.ir.fg:14
+    info:fedora/utk.ir.fg:18
+    info:fedora/utk.ir.fg:27
+    info:fedora/utk.ir.fg:29
+    info:fedora/utk.ir.fg:101
+    info:fedora/utk.ir.fg:2090
+    info:fedora/utk.ir.fg:2099
+    info:fedora/utk.ir.fg:2110
+    info:fedora/utk.ir.fg:2112
+    info:fedora/utk.ir.fg:2129
+    info:fedora/utk.ir.fg:2132
+    info:fedora/utk.ir.fg:2162
+    info:fedora/utk.ir.fg:2176
+    info:fedora/utk.ir.fg:2179
+    info:fedora/utk.ir.fg:2188
+    info:fedora/utk.ir.fg:2193
+    info:fedora/utk.ir.fg:2198
+    info:fedora/utk.ir.fg:2215
+    info:fedora/utk.ir.fg:2239
+    info:fedora/utk.ir.fg:2245
+    info:fedora/utk.ir.fg:2248
+    info:fedora/utk.ir.fg:2263
+    info:fedora/utk.ir.fg:2268
+    info:fedora/utk.ir.fg:2273
+    info:fedora/utk.ir.fg:2287
+    info:fedora/utk.ir.fg:2290
+    info:fedora/utk.ir.fg:2303
+    info:fedora/utk.ir.fg:2307
+    info:fedora/utk.ir.fg:2311
+    info:fedora/utk.ir.fg:2341
+    info:fedora/utk.ir.fg:2355
+    info:fedora/utk.ir.fg:2360
+    info:fedora/utk.ir.fg:2381
+    info:fedora/utk.ir.fg:2384
+    info:fedora/utk.ir.fg:2385
 
 Suggested Actions
 -----------------
@@ -81,3 +147,111 @@ Unlike Google Scholar, Google Dataset Search relies on a structured body via a S
 tag in the :code:`head` of the document.
 
 Our metadata mapping will include this conversion for this worktype.
+
+===================
+Required Properties
+===================
+
+----
+name
+----
+
+A descriptive name of the dataset. For example, "Snow depth in the Northern Hemisphere".
+
+The name property is modeled as `Schema.org Text <https://schema.org/Text>`_.
+
+-----------
+description
+-----------
+
+A short summary describing the dataset.
+
+The summary must be between 50 and 5000 characters long and may include Markdown syntax. Embedded images need to use
+absolute path URLs.
+
+The description property is modeled as `Schema.org Text <https://schema.org/Text>`_.
+
+-----------------------
+distribution.contentUrl
+-----------------------
+
+======================
+Recommended Properties
+======================
+
+-------------
+alternateName
+-------------
+
+-------
+creator
+-------
+
+--------
+citation
+--------
+
+------------
+distribution
+------------
+
+---------------------------
+distribution.encodingFormat
+---------------------------
+
+------
+funder
+------
+
+-------------------
+hasPart or isPartOf
+-------------------
+
+----------
+identifier
+----------
+
+---------------------
+includedInDataCatalog
+---------------------
+
+-------------------
+isAccessibleForFree
+-------------------
+
+--------
+keywords
+--------
+
+-------
+license
+-------
+
+--------------------
+measurementTechnique
+--------------------
+
+------
+sameAs
+------
+
+---------------
+spatialCoverage
+---------------
+
+----------------
+temporalCoverage
+----------------
+
+----------------
+variableMeasured
+----------------
+
+-------
+version
+-------
+
+---
+url
+---
+
