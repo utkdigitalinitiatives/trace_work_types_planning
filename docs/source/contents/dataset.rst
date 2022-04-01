@@ -67,7 +67,8 @@ Using a bit of sparql, we can determine what our list of datasets in Digital Com
     PREFIX model: <info:fedora/fedora-system:def/model#>
     SELECT $pid FROM <#ri> WHERE {{
     ?pid rels-ext:isMemberOfCollection <info:fedora/utk.ir:fg>;
-    model:hasModel <info:fedora/islandora:compoundCModel> . }}
+    model:hasModel <info:fedora/islandora:compoundCModel> ;
+    model:label ?label . }}
 
 That returns these results:
 
@@ -501,3 +502,6 @@ url
 Location of a page describing the dataset.
 
 The property can be modelled as `URL <https://schema.org/URL>`_.
+
+Descriptive Metadata Mapping
+----------------------------
