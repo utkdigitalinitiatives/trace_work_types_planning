@@ -261,6 +261,43 @@ tag in the :code:`head` of the document.
 
 Our metadata mapping will include this conversion for this worktype.
 
+========================
+Sample Deep Blue DataSet
+========================
+
+This is a sample dataset from Deep Blue to aid in mapping:
+
+.. code-block:: json
+
+    {
+        "@context": "http://schema.org/",
+        "@type": "Dataset",
+        "@id": "https://doi.org/10.7302/s3nc-wh40",
+        "name": "Data for &quot;Metropolitan air pollution abatement &amp; industrial growth: Global urban panel analysis of PM2.5, PM10, SO2 and NO2&quot;",
+        "description": ["Data were gathered to test three hypotheses on the impact economic growth has on environmental conditions in urban areas. The three hypotheses are: 1. Income will be associated with reductions in PM2.5, PM10, NO2 and SO2. 2. Public Administration GVA will be associated with reductions in PM2.5, PM10, NO2 and SO2. 3. Urban density will be associated with reductions in PM2.5, PM10, NO2 and SO2. More information about the research and the data can be found in: Benjamin Leffel, Nikki Tavasoli, Brantley Liddle, Kent Henderson &amp; Sabrina Kiernan (2021) Metropolitan air pollution abatement and industrial growth: Global urban panel analysis of PM10, PM2.5, NO2 and SO2, Environmental Sociology, DOI: 10.1080/23251042.2021.1975349. "],
+        "url": "https://deepblue.lib.umich.edu/data/concern/data_sets/d217qp73w",
+        "identifier": "https://doi.org/10.7302/s3nc-wh40",
+        "isAccessibleForFree": true,
+        "keywords": ["global cities","environment","urban","air pollution","income","Urban Sustainability Research Group","student-friendly"],
+        "creator": [{ "@type": "Person",
+                          "name": "Benjamin Leffel"}],
+          "temporalCoverage": [
+            "2005",
+            "2017"
+          ],
+        "citation": "Benjamin Leffel. (2022). Data for &quot;Metropolitan air pollution abatement &amp; industrial growth&#58; Global urban panel analysis of PM2.5, PM10, SO2 and NO2&quot [Data set], University of Michigan - Deep Blue Data. https://doi.org/10.7302/s3nc-wh40",
+        "license":
+          {"@type": "CreativeWork",
+           "name": "Attribution 4.0 International (CC BY 4.0)",
+           "license": "http://creativecommons.org/licenses/by/4.0/"},
+        "publisher":
+          {"@id": "https://deepblue.lib.umich.edu/data/",
+           "@type": "Organization",
+           "legalName": "University of Michigan - Deep Blue Data",
+           "name": "Deep Blue Data",
+           "url": "https://deepblue.lib.umich.edu/data"}
+    }
+
 ===================
 Required Properties
 ===================
