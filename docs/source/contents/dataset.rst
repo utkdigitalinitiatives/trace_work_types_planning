@@ -584,3 +584,42 @@ Descriptive Metadata Mapping
 +--------------------------+--------------------------+-------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------------------------------------------------------------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | language                 | Language                 | http://purl.org/dc/terms/language               | The language of the resource.                                                                                                                                                                                           | Optional | 0-n        | no         |           |               |                                                                                    |                                                    |                                                                                                                                                                                          |
 +--------------------------+--------------------------+-------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------------------------------------------------------------+----------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+UTK Requested Mapping
+---------------------
+
+**NOTE**:  our mapping is intentionally simple.
+
+.. code-block:: json
+
+    {
+        "@context": "http://schema.org/",
+        "@type": "Dataset",
+        "@id": "https://doi.org/10.7290/xM68gPMMvQ",
+        "name": "Influence of Flocculant on Flow Behavior and Undrained Shear Strength of Fine Coal Refuse",
+        "description": "This data set is in support of a manuscript submitted accepted for publication in the journal Fuel. The purpose of this study is to investigate the effect of an added flocculant on the flow behavior and undrained shear strength of fine coal refuse (FCR) from an active impoundment in eastern Kentucky. The specimens were formed from fresh FCR slurry samples obtained from a slurry discharge pipe, as well as solids recovered from the same fresh FCR mixed with either distilled water or a sodium hexametaphosphate dispersant solution. The specimens were consolidated in columns over a range of low stresses to create soft, relatively low strength specimens. Specimens were prepared with different initial void ratios and moisture contents. Flow table tests and vane shear strength tests were performed to investigate the influence of the background solution type on the flow behavior and undrained shear strength.",
+        "url": "https://our-future-repo.ir.utk.edu/datasets/sample/1",
+        "identifier": "https://doi.org/10.7290/xM68gPMMvQ",
+        "isAccessibleForFree": true,
+        "keywords": ["fine coal refuse", "flow table", "undrained shear strength", "flocculant", "dispersant"],
+        "creator": [{ "@type": "Person",
+                          "name": "Angelica M. Palomino"},
+                    { "@type": "Person",
+                          "name": "Cyrus Jedari"},
+            ],
+          "temporalCoverage": [
+            "2017-05-01",
+            "2018-04-30"
+          ],
+        "citation": "https://doi.org/10.7302/s3nc-wh40",
+        "license":
+          {"@type": "CreativeWork",
+           "name": "Attribution 4.0 International (CC BY 4.0)",
+           "license": "http://creativecommons.org/licenses/by/4.0/"},
+        "publisher":
+          {"@id": "https://our-future-repo.lib.utk.edu/data",
+           "@type": "Organization",
+           "legalName": "University of Tennessee, Knoxville",
+           "name": "Data Repository",
+           "url": "https://our-future-repo.lib.utk.edu/data/"}
+    }
