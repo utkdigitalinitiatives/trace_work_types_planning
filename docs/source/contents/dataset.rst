@@ -588,7 +588,9 @@ Descriptive Metadata Mapping
 UTK Requested Mapping
 ---------------------
 
-**NOTE**:  our mapping is intentionally simple.
+**NOTE**:  our mapping is intentionally simple compared to others
+
+No funders, spatial data, or orcids are here due to missing metadata.
 
 .. code-block:: json
 
