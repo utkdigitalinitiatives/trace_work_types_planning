@@ -1,5 +1,5 @@
-Thesis / Dissertation Work Type
-===============================
+Thesis Work Type
+================
 
 About
 -----
