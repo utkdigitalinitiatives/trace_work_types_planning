@@ -251,6 +251,44 @@ For migration, we want to move the metadata from the compound object and each bi
 Suggested PCDM Model for Fedora
 -------------------------------
 
+A dataset can have :code:`1-n` files and they should all be treated as original files and preserved.
+
+==============
+The Whole Work
+==============
+
+The object should be a :code:`pcdmworks:Work` and describe its relationship to its files along with its descriptive
+metadata elements.
+
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/sample-dataset> a pcdmworks:Work ;
+        <http://purl.org/dc/terms/title> "Competing magnetostructural phases in a semiclassical system" ;
+        pcdm:hasFile <http://localhost/sample_dataset_file_1> .
+
+==========================
+The Original Uploaded File
+==========================
+
+The original uploaded file(s) representing this work should be :code:`pcdmuse:OriginalFile`.
+
+.. code-block:: turtle
+
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    <http://localhost/dataset_file_1> a pcdmuse:OriginalFile ;
+        rdfs:label "sample.csv" ;
+        pcdm:fileOf <http://localhost/sample-dataset> .
+
+
+
 Google Dataset Inclusion
 ------------------------
 
