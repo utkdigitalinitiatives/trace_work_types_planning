@@ -1,7 +1,7 @@
 Questions about Work Types
 --------------------------
 
-Worktypes We've Defined
+Work Types We've Defined
 =======================
 
 We have defined 8 work types for the IR.  2 of them are exactly the same, but we created them separately to avoid confusion.
@@ -31,3 +31,97 @@ I think we just handle all this with metadata on the fileset.  Do you disagree?
 
 Also, if we did this, how can we state this for the work so that theses that are uploaded get the same data?
 
+To help think about this, here is an example thesis.  We want to keep the original PDF, but we want to point at the one
+with cover materials in Google Scholar.  Also, we want to know that the supplemental files are just that.
+
+-------------
+Original File
+-------------
+
+The original file may have some metadata like this.
+
+.. code-block:: turtle
+
+    @prefix : <https://utk-future-repo/some/path/>
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    :etd_file_1 a pcdmuse:OriginalFile ;
+        rdfs:label "MorrisJames_May2011_dissertation.pdf" ;
+        pcdm:fileOf :sample-etd .
+
+-----------------------------------------
+Final File with Generated Cover Materials
+-----------------------------------------
+
+.. code-block:: turtle
+
+    @prefix : <https://utk-future-repo/some/path/>
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    :etd_file_2 a pcdmuse:PreservationFile, pcdmuse:IntermediateFile ;
+        rdfs:label "final_etd.pdf" ;
+        pcdm:fileOf :sample-etd .
+
+--------------------
+Supplemental File(s)
+--------------------
+
+.. code-block:: turtle
+
+    @prefix : <https://utk-future-repo/some/path/>
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+    @prefix dcterms: <http://purl.org/dc/terms/> .
+    @prefix fabio: <http://purl.org/spar/fabio/> .
+
+    :etd_file_suppl_1 a fabio:SupplementaryInformation  ;
+        rdfs:label "Supplemental_File_1.fasta" ;
+        dcterms:description "JCVI-CMR Catalase Database (FASTA format)" ;
+        dcterms:format "text/plain" ;
+        pcdm:fileOf :sample-etd .
+
+    :etd_file_suppl_2 fabio:SupplementaryInformation ;
+        rdfs:label "Supplemental_File_2.fasta" ;
+        dcterms:description "JCVI-CMR rpsL Database (FASTA format)" ;
+        dcterms:format "text/plain" ;
+        pcdm:fileOf :sample-etd .
+
+    :etd_file_suppl_3 a fabio:SupplementaryInformation ;
+        rdfs:label "Supplemental_File_3.csv" ;
+        dcterms:description "Taxonomy of GOS catalase/rpsL hits" ;
+        dcterms:format "application/vnd.ms-excel" ;
+        pcdm:fileOf :sample-etd .
+
+    :etd_file_suppl_4 a fabio:SupplementaryInformation ;
+        rdfs:label "Supplemental_File_4.csv" ;
+        dcterms:description "GOS catalase hits with metadata (CSV format)" ;
+        dcterms:format "text/plain" ;
+        pcdm:fileOf :sample-etd .
+
+    :etd_file_suppl_5 a fabio:SupplementaryInformation ;
+        rdfs:label "Supplemental_File_5.csv" ;
+        dcterms:description "GOS rpsL hits with metadata (CSV format)" ;
+        dcterms:format "text/plain" ;
+        pcdm:fileOf :sample-etd .
+
+-----------------
+Original Metadata
+-----------------
+
+We want to keep the original metadata, but restrict it. How do we apply WEBAC or describe that?
+
+.. code-block:: turtle
+
+    @prefix : <https://utk-future-repo/some/path/>
+    @prefix pcdm: <http://pcdm.org/models#> .
+    @prefix pcdmuse: <http://pcdm.org/2015/05/12/use> .
+    @prefix pcdmworks: <http://pcdm.org/2016/02/16/works> .
+
+    :etd_file_3 a pcdm:File ;
+        rdfs:label "metadata.xml" ;
+        pcdm:fileOf :sample-etd .
