@@ -1,8 +1,8 @@
 Questions about Work Types
 --------------------------
 
-Work Types We've Defined
-=======================
+1. Work Types We've Defined
+===========================
 
 We have defined 8 work types for the IR.  2 of them are exactly the same, but we created them separately to avoid confusion.
 Each are described by a document here, but this is the TLDR:
@@ -16,8 +16,8 @@ Each are described by a document here, but this is the TLDR:
 7. Other: A work with files of any mimetype that should not be in Google Scholar.  Thus, has no metatag mapping.
 8. Technical report: A work that is a PDF that should appear in Google Scholar as a technical report.  To aid in this, has its own Google Scholar mapping.
 
-Structural Metadata
-===================
+2. Structural Metadata
+======================
 
 All work type definitions have a section about structural metadata.  After our talk last week, I think it makes sense
 to just handle this all with fileset metadata.  For instance, we'd like certain files to have specific :code:`pcdmuse`
@@ -125,3 +125,11 @@ We want to keep the original metadata, but restrict it. How do we apply WEBAC or
     :etd_file_3 a pcdm:File ;
         rdfs:label "metadata.xml" ;
         pcdm:fileOf :sample-etd .
+
+3. Specifying Restriction on Access Embargoing for Batch Upload
+===============================================================
+
+All work types have a need for restriction on access.  Restriction of files will be simple:  admin of the repostiory.
+How can we specify this?  Is this needed for worktype?
+
+Similarly, how do we do embargo migration?
