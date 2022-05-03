@@ -16,6 +16,9 @@ Each are described by a document here, but this is the TLDR:
 7. Other: A work with files of any mimetype that should not be in Google Scholar.  Thus, has no metatag mapping.
 8. Technical report: A work that is a PDF that should appear in Google Scholar as a technical report.  To aid in this, has its own Google Scholar mapping.
 
+The question:  do the expectations for metatags / JSON-LD bodies, fileset metadata, and separately labeled works make
+sense for unique worktypes.  Is there anything you see here that is problematic?
+
 2. Structural Metadata
 ======================
 
