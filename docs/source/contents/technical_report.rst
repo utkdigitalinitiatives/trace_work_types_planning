@@ -16,20 +16,6 @@ These objects should always have:
 2. Descriptive metadata
 3. Proper metatags for correct Google Scholar Inclusion
 
-Migration Scope
----------------
-
-Items migrated like this will come from select collections.
-
-The primary file type should be a :code:`pdf`.
-
-Suggested Actions
------------------
-
-1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
-2. We need to generate a cover page for these that match our descriptive metadata.
-3. We will only keep supplemental files that are mentioned
-
 Example
 -------
 
@@ -44,6 +30,9 @@ For this example, let's use the contents of :code:`https://trace.tennessee.edu/c
 
 This object includes a descriptive metadata file, the original file uploaded, and a copy of the file with
 a cover page.
+
+Suggested PCDM / Structural Metadata
+------------------------------------
 
 ==============
 The Whole Work
@@ -138,20 +127,6 @@ While this object does not have one, we would model it like this if it did:
         dcterms:format "text/plain" ;
         pcdm:fileOf <http://localhost/sample-technical-report> .
 
-User Expectations
------------------
-
-The user should see the title, files, and other pertinent metadata defined in our metadata mapping. It should look similar
-to an :code:`Article` or other works.
-
-Restricted files should be appropriately restricted.
-
-Unrestricted files should be available.
-
-.. image:: ../images/technical_report_view.png
-    :width: 600
-    :Alt: Wireframe of a Sample Technical Report
-
 Google Scholar Metatags
 -----------------------
 
@@ -205,3 +180,37 @@ Descriptive Metadata
 +------------------+------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
 | language         | Language         | http://purl.org/dc/terms/language              | The language of the resource.                                                                                                                                                                                                                                                    | Optional | 0-n        | no         | no        | no            | local yaml or ISO 639-1 list | ISO 639-1 two-letter code | citation_language                        |
 +------------------+------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
+
+User Expectations
+-----------------
+
+The user should see the title, files, and other pertinent metadata defined in our metadata mapping. It should look similar
+to an :code:`Article` or other works.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available.
+
+.. image:: ../images/technical_report_view.png
+    :width: 600
+    :Alt: Wireframe of a Sample Technical Report
+
+
+For UTK Faculty and Staff Only
+------------------------------
+
+===============
+Migration Scope
+===============
+
+Items migrated like this will come from select collections.
+
+The primary file type should be a :code:`pdf`.
+
+=================
+Suggested Actions
+=================
+
+1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
+2. We need to generate a cover page for these that match our descriptive metadata.
+3. We will only keep supplemental files that are mentioned

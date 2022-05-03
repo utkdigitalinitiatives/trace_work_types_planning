@@ -20,23 +20,6 @@ These object should always have:
 2. Descriptive metadata and metatags that match the first page of the document.
 3. Any attached supplemental files that were added by the author.
 
-Migration Scope
----------------
-
-Current items in Digital Commons with an xpath of :code:`fields/field[@name="peer_reviewed"]` will get this type.
-
-We will also select specific collections in series across the repository to migrate as this work type.
-
-Only objects whose primary file is :code:`PDF` should get this work type.
-
-Suggested Actions
------------------
-
-1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
-2. Since objects may be a pre-print or a version not created by the publisher, we should add a cover page to these with matching descriptive metadata for Google Scholar inclusion.
-3. We will provide the vendor for migration pages without the cover page.
-4. We will keep all associated supplemental files.
-
 Example
 -------
 
@@ -158,23 +141,6 @@ While this object does not have one, we would model it like this if it did:
         dcterms:format "text/plain" ;
         pcdm:fileOf <http://localhost/sample-scholarly-work> .
 
-
-User Expectations
------------------
-
-The user should see a thumbnail, the title, and other pertinent metadata defined in our metadata mapping.
-
-Restricted files should be appropriately restricted.
-
-Unrestricted files should be available beneathe the metadata.
-
-Although not shown here, we would love a IIIF viewer with a representation of the :code:`pcdmuse:IntermediateFile` based
-on canvases generated from each page.
-
-.. image:: ../images/Article_view.png
-    :width: 600
-    :Alt: Wireframe of a Sample Article
-
 Google Scholar
 --------------
 
@@ -245,12 +211,47 @@ Descriptive Metadata Mapping
 | language           | Language           | http://purl.org/dc/terms/language              | The language of the resource.                                                                                                                                                                                                                                                    | Optional | 0-n        | no         | no        | no            | local yaml or ISO 639-1 list | ISO 639-1 two-letter code | citation_language                        |
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
 
-Other Things to Think About
----------------------------
+User Expectations
+-----------------
 
-======================================
-Properly Tagged but Unindexed Articles
-======================================
+The user should see a thumbnail, the title, and other pertinent metadata defined in our metadata mapping.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available beneathe the metadata.
+
+Although not shown here, we would love a IIIF viewer with a representation of the :code:`pcdmuse:IntermediateFile` based
+on canvases generated from each page.
+
+.. image:: ../images/Article_view.png
+    :width: 600
+    :Alt: Wireframe of a Sample Article
+
+For UTK Faculty and Staff Only
+------------------------------
+
+===============
+Migration Scope
+===============
+
+Current items in Digital Commons with an xpath of :code:`fields/field[@name="peer_reviewed"]` will get this type.
+
+We will also select specific collections in series across the repository to migrate as this work type.
+
+Only objects whose primary file is :code:`PDF` should get this work type.
+
+=================
+Suggested Actions
+=================
+
+1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
+2. Since objects may be a pre-print or a version not created by the publisher, we should add a cover page to these with matching descriptive metadata for Google Scholar inclusion.
+3. We will provide the vendor for migration pages without the cover page.
+4. We will keep all associated supplemental files.
+
+=============================================
+Other: Properly Tagged but Unindexed Articles
+=============================================
 
 Here is a `article <https://cdr.lib.unc.edu/concern/articles/d217qv80b?locale=en>`_ from UNC's repository. Like other
 items of this work type, it has the appropriate :code:`highwire press` metatags:

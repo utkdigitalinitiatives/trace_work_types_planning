@@ -8,19 +8,6 @@ This work type represents objects from our institutional repository that do not 
 
 These objects can have :code:`1-n` files and the primary file can be any extension.
 
-Migration Scope
----------------
-
-Items that are deemed out of scope of Google Scholar will get this worktype.
-
-Suggested Actions
------------------
-
-1. Since these items are not in scope of Google Scholar, they do not need a cover page.
-2. We will migrate all supplemental files mentioned in the metadata.xml.
-3. Datasets will be other.
-4. Streaming media will be other.
-
 Example
 -------
 
@@ -180,3 +167,21 @@ Descriptive Metadata
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
 | language           | Language           | http://purl.org/dc/terms/language              | The language of the resource.                                                                                                                                                                                                                                                    | Optional | 0-n        | no         | no        | no            | local yaml or ISO 639-1 list | ISO 639-1 two-letter code | citation_language                        |
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
+
+For UTK Faculty and Staff
+-------------------------
+
+===============
+Migration Scope
+===============
+
+Items that are deemed out of scope of Google Scholar will get this worktype.
+
+=================
+Suggested Actions
+=================
+
+1. Since these items are not in scope of Google Scholar, they do not need a cover page.
+2. We will migrate all supplemental files mentioned in the metadata.xml.
+3. Datasets will be other.
+4. Streaming media will be other.

@@ -10,24 +10,6 @@ portions of the entire object.
 This is a separate work type primarily because stakeholders felt that people would not know whether this should go to
 book or other.
 
-Migration Scope
----------------
-
-Only PDF like objects whould get this work type and items will be hand selected to get this work type. One specific collection
-in scope is:
-
-.. code-block:: text
-
-    utk_sasproceed
-
-Suggested Actions
------------------
-
-1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
-2. We may need a cover page for these.
-3. We will keep all associated supplemental files.
-4. We will hand select these for migration.
-
 Example
 -------
 
@@ -123,20 +105,6 @@ While this object does not have one, we would model it like this if it did:
         dcterms:format "text/plain" ;
         pcdm:fileOf <http://localhost/sample-conference-proceedings> .
 
-
-User Expectations
------------------
-
-The user should see the title, files, and other pertinent metadata defined in our metadata mapping.
-
-Restricted files should be appropriately restricted.
-
-Unrestricted files should be available.
-
-.. image:: ../images/book_work_type.png
-    :width: 600
-    :Alt: Wireframe of a Sample Technical Report
-
 Google Scholar Metatags
 -----------------------
 
@@ -203,3 +171,40 @@ Descriptive Metadata
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
 | link               | Link to Full Text  | https://schema.org/url                         | A link to the primary resource described in the citation                                                                                                                                                                                                                         | Required | 1          | no         | no        | no            | none                         |                           | citation_fulltext_html_url               |
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
+
+User Expectations
+-----------------
+
+The user should see the title, files, and other pertinent metadata defined in our metadata mapping.
+
+Restricted files should be appropriately restricted.
+
+Unrestricted files should be available.
+
+.. image:: ../images/book_work_type.png
+    :width: 600
+    :Alt: Wireframe of a Sample Technical Report
+
+For UTK Faculty and Staff Only
+------------------------------
+
+===============
+Migration Scope
+===============
+
+Only PDF like objects whould get this work type and items will be hand selected to get this work type. One specific collection
+in scope is:
+
+.. code-block:: text
+
+    utk_sasproceed
+
+=================
+Suggested Actions
+=================
+
+1. Only objects whose primary file type :code:`PDF` should be migrated as this work type.
+2. We may need a cover page for these.
+3. We will keep all associated supplemental files.
+4. We will hand select these for migration.
+

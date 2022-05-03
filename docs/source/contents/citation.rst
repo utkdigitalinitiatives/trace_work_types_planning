@@ -9,18 +9,6 @@ files elsewhere.
 
 These objects should only ever have descriptive metadata related to the object and pointers to the external object.
 
-Migration Scope
----------------
-
-Current items in Digital Commons with only a :code:`metadata.xml` file that do not point at files at
-https://trace.lib.utk.edu.
-
-Suggested Actions
------------------
-
-1. Only objects with just a metadata.xml file that does not point at https://trace.lib.utk.edu should be this for migration.
-2. Do not include metatags that would make these available in Google Scholar.
-
 Example
 -------
 
@@ -71,17 +59,6 @@ Ideally, this would not be available to users (at least in the GUI).
         rdfs:label "metadata.xml" ;
         pcdm:fileOf <http://localhost/sample-citation> .
 
-User Expectations
------------------
-
-The user should see the title and other pertinent metadata defined in our metadata mapping.
-
-A link to the referring file should be included.
-
-.. image:: ../images/Citation_view.png
-    :width: 600
-    :Alt: Wireframe of a Sample Citation
-
 Descriptive Metadata
 --------------------
 
@@ -130,3 +107,31 @@ Descriptive Metadata
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
 | link               | Link to Full Text  | https://schema.org/url                         | A link to the primary resource described in the citation                                                                                                                                                                                                                         | Required | 1          | no         | no        | no            | none                         |                           | citation_fulltext_html_url               |
 +--------------------+--------------------+------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+-----------+---------------+------------------------------+---------------------------+------------------------------------------+
+
+User Expectations
+-----------------
+
+The user should see the title and other pertinent metadata defined in our metadata mapping.
+
+A link to the referring file should be included.
+
+.. image:: ../images/Citation_view.png
+    :width: 600
+    :Alt: Wireframe of a Sample Citation
+
+For UTK Faculty and Staff Only
+------------------------------
+
+===============
+Migration Scope
+===============
+
+Current items in Digital Commons with only a :code:`metadata.xml` file that do not point at files at
+https://trace.lib.utk.edu.
+
+=================
+Suggested Actions
+=================
+
+1. Only objects with just a metadata.xml file that does not point at https://trace.lib.utk.edu should be this for migration.
+2. Do not include metatags that would make these available in Google Scholar.
