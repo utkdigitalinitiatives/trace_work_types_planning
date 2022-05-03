@@ -66,6 +66,15 @@ Migration Decisions
 
    migration/*
 
+Questions for Notch 8 / Scientist.com
+-------------------------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   questions/*
+
 Search
 ======
 
