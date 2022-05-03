@@ -136,3 +136,8 @@ All work types have a need for restriction on access.  Restriction of files will
 How can we specify this?  Is this needed for worktype?
 
 Similarly, how do we do embargo migration?
+
+4. Worktypes and Admin Sets
+===========================
+
+How do work types and administrative sets (I think this is what they are called work together?
